@@ -1,0 +1,5 @@
+"experiment_name","variant","conversion_rate_pct","ci_lower_pct","ci_upper_pct","z_score","p_value","is_significant","winner"
+"Landing Page Test","control","12.0399","11.8737","12.2062","1.236900","0.387300",False,"inconclusive"
+"Landing Page Test","treatment","11.8920","11.7266","12.0573","1.236900","0.387300",False,"inconclusive"
+"Ad Exposure Test","ad","2.5547","2.5135","2.5958","7.370100","0.000000",True,"winner"
+"Ad Exposure Test","psa","1.7854","1.6162","1.9546","7.370100","0.000000",True,"loser"

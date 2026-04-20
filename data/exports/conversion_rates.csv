@@ -1,0 +1,5 @@
+"experiment_name","variant","total_users","total_conversions","conversion_rate_pct"
+"Landing Page Test","control","147202","17723","12.0399"
+"Landing Page Test","treatment","147276","17514","11.8920"
+"Ad Exposure Test","ad","564577","14423","2.5547"
+"Ad Exposure Test","psa","23524","420","1.7854"

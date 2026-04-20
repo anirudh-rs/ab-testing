@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Data files (too large for GitHub)
+data/ab_data.csv
+data/marketing_AB.csv
+
+# Environment
+.env
+*.env
+
+# pgAdmin
+*.pgpass
