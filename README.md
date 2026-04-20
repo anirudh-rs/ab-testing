@@ -48,6 +48,8 @@ segmentation, and time-series analysis — all without leaving PostgreSQL.
 ---
 
 ## Project Structure
+
+<pre>
 ABTesting/
 │
 ├── data/
@@ -78,6 +80,7 @@ ABTesting/
 │   └── 09_summary_report.sql
 │
 └── README.md
+</pre>
 
 ---
 
