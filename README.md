@@ -141,11 +141,6 @@ reports/09_summary_report.sql
 ## Visualisation
 
 Interactive Tableau Public dashboard:
-[View Dashboard](YOUR_TABLEAU_PUBLIC_URL)
+[View Dashboard](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTestResultsAnalysis_17766967604600/ABTestAnalysis)
 
 ---
-
-## Author
-
-**YOUR NAME**  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) | [GitHub](https://github.com/YOUR_USERNAME)
