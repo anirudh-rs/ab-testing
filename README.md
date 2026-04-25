@@ -16,17 +16,15 @@ segmentation, and time-series analysis — all without leaving PostgreSQL.
 
 ## Key Findings
 
-| Experiment | Result | Verdict |
-|---|---|---|
-| Landing Page Test | Z=1.24, P=0.39 | ❌ No significant difference — do not ship |
-| Ad Exposure Test | Z=7.37, P≈0.00 | ✅ Ads win — 43% relative uplift over PSA |
-
-**Additional insights:**
-- Users shown 100+ ads convert at **17.14%** vs **0.33%** for 1-10 ads — a 52x difference
-- Peak conversion times are **Monday-Tuesday, 2pm-4pm**
-- **1.3% of users** received mismatched page assignments — flagged as a data quality issue
-- Traffic split held at a perfect **50/50** every single day of the test
-
+| Finding | Result |
+|---|---|
+| Landing Page Test | ❌ Inconclusive (z=1.24, p=0.39) — do not ship |
+| Ad Exposure Test | ✅ Ads win with 43% uplift (z=7.37, p≈0.00) |
+| Ad Frequency | 100+ ads converts at 52x the rate of 1-10 ads |
+| Peak Timing | Monday-Tuesday, 2pm-4pm drives highest conversions |
+| Data Quality | 1.3% of users received mismatched page assignments |
+| Test Integrity | Perfect 50/50 traffic split across all 23 days |
+| Stabilisation | Conversion rates converged within 3 days of test start |
 ---
 
 ## Tech Stack
@@ -81,7 +79,6 @@ ABTesting/
 │
 └── README.md
 </pre>
-
 ---
 
 ## SQL Techniques Used
@@ -143,7 +140,21 @@ reports/09_summary_report.sql
 
 ## Visualisation
 
-Interactive Tableau Public dashboard:
-[View Dashboard](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTestResultsAnalysis_17766967604600/ABTestAnalysis)
+Three Tableau Public dashboards built from exported SQL results:
 
+**Dashboard 1 — Experiment Results Summary**
+- Conversion rates per variant across both experiments
+- Z-score significance testing with 1.96 threshold reference line
+- 95% confidence intervals with overlap detection
+
+**Dashboard 2 — Ad Exposure Analysis**
+- Conversion rate by ad frequency tier (0 to 100+ ads)
+- Hourly conversion trend for ad vs PSA group
+- Day and hour heatmap showing peak conversion windows
+
+**Dashboard 3 — Test Integrity & Time Series**
+- Daily conversion rates over the full 23-day test period
+- Running conversion rates confirming test stabilisation by day 3
+
+[View Dashboards](https://public.tableau.com/app/profile/anirudh.raghavendra/vizzes)
 ---
