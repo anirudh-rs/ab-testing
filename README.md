@@ -25,6 +25,7 @@ segmentation, and time-series analysis — all without leaving PostgreSQL.
 | Data Quality | 1.3% of users received mismatched page assignments |
 | Test Integrity | Perfect 50/50 traffic split across all 23 days |
 | Stabilisation | Conversion rates converged within 3 days of test start |
+
 ---
 
 ## Tech Stack
@@ -32,7 +33,7 @@ segmentation, and time-series analysis — all without leaving PostgreSQL.
 - **PostgreSQL** — all data storage, querying, and statistical analysis
 - **pgAdmin** — database management and query execution
 - **Python** — CSV data loading only (psycopg2, pandas)
-- **Tableau Public** — results visualisation
+- **Tableau Public** — results visualisation across 3 dashboards
 
 ---
 
@@ -79,6 +80,7 @@ ABTesting/
 │
 └── README.md
 </pre>
+
 ---
 
 ## SQL Techniques Used
@@ -103,38 +105,42 @@ ABTesting/
 
 ### Setup
 
-1. Clone the repository
+**1. Clone the repository**
 ```bash
-   git clone https://github.com/YOUR_USERNAME/ABTesting.git
-   cd ABTesting
+git clone https://github.com/anirudhraghavendra/ABTesting.git
+cd ABTesting
 ```
 
-2. Install Python dependencies
+**2. Install Python dependencies**
 ```bash
-   pip install psycopg2-binary pandas
+pip install psycopg2-binary pandas
 ```
 
-3. Create the database in pgAdmin
+**3. Create the database in pgAdmin**
 ```sql
-   CREATE DATABASE ab_test_db;
+CREATE DATABASE ab_test_db;
 ```
 
-4. Run the schema scripts in pgAdmin
+**4. Run the schema scripts in pgAdmin**
+```
 schema/01_create_tables.sql
 schema/02_create_indexes.sql
-
-5. Update your credentials in `data_load/03_load_data.py` then run
-```bash
-   python data_load/03_load_data.py
 ```
 
-6. Run the analysis queries in order
+**5. Update your credentials in `data_load/03_load_data.py` then run**
+```bash
+python data_load/03_load_data.py
+```
+
+**6. Run the analysis queries in order**
+```
 analysis/04_conversion_rates.sql
 analysis/05_statistical_tests.sql
 analysis/06_confidence_intervals.sql
 analysis/07_demographic_segments.sql
 analysis/08_time_series.sql
 reports/09_summary_report.sql
+```
 
 ---
 
@@ -147,13 +153,24 @@ Three Tableau Public dashboards built from exported SQL results:
 - Z-score significance testing with 1.96 threshold reference line
 - 95% confidence intervals with overlap detection
 
+[View Dashboard 1](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTesting1_17771333267360/ExperimentsResultsSummary)
+
 **Dashboard 2 — Ad Exposure Analysis**
 - Conversion rate by ad frequency tier (0 to 100+ ads)
 - Hourly conversion trend for ad vs PSA group
 - Day and hour heatmap showing peak conversion windows
 
+[View Dashboard 2](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTesting2_17771333874980/AdExposureAnalysis)
+
 **Dashboard 3 — Test Integrity & Time Series**
 - Daily conversion rates over the full 23-day test period
 - Running conversion rates confirming test stabilisation by day 3
 
-[View Dashboards](https://public.tableau.com/app/profile/anirudh.raghavendra/vizzes)
+[View Dashboard 3](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTesting3/TestIntegrityTimeSeries)
+
+---
+
+## Author
+
+**Anirudh Raghavendra**  
+[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) | [GitHub](https://github.com/YOUR_USERNAME)
