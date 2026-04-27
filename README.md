@@ -107,7 +107,7 @@ ABTesting/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/anirudhraghavendra/ABTesting.git
+git clone https://github.com/anirudh-rs/ABTesting.git
 cd ABTesting
 ```
 
