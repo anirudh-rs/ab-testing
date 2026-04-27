@@ -167,10 +167,3 @@ Three Tableau Public dashboards built from exported SQL results:
 - Running conversion rates confirming test stabilisation by day 3
 
 [View Dashboard 3](https://public.tableau.com/app/profile/anirudh.raghavendra/viz/ABTesting3/TestIntegrityTimeSeries)
-
----
-
-## Author
-
-**Anirudh Raghavendra**  
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) | [GitHub](https://github.com/YOUR_USERNAME)
